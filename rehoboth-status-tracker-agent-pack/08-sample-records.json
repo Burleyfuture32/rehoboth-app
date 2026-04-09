@@ -1,0 +1,64 @@
+{
+  "sampleDeal": {
+    "dealId": "deal_demo_01",
+    "dealName": "Memphis Purchase - Demo",
+    "overallPercentComplete": 40,
+    "sections": [
+      {
+        "sectionKey": "borrower",
+        "sectionLabel": "Borrower",
+        "name": "James Carter",
+        "status": "complete",
+        "notes": "ID, paystubs, and bank statements received.",
+        "dueDate": "2026-04-06",
+        "lastUpdatedAt": "2026-04-07T09:00:00Z",
+        "blockerReason": null,
+        "percentComplete": 100
+      },
+      {
+        "sectionKey": "lo",
+        "sectionLabel": "LO",
+        "name": "Kelvin Abram",
+        "status": "in_progress",
+        "notes": "Reviewing file and stacking conditions.",
+        "dueDate": "2026-04-08",
+        "lastUpdatedAt": "2026-04-07T09:20:00Z",
+        "blockerReason": null,
+        "percentComplete": 65
+      },
+      {
+        "sectionKey": "title",
+        "sectionLabel": "Title",
+        "name": "Delta Title Services",
+        "status": "pending",
+        "notes": "Search ordered, awaiting return.",
+        "dueDate": "2026-04-09",
+        "lastUpdatedAt": "2026-04-07T09:35:00Z",
+        "blockerReason": "Waiting on title company.",
+        "percentComplete": 40
+      },
+      {
+        "sectionKey": "lender",
+        "sectionLabel": "Lender",
+        "name": "Rehoboth Group",
+        "status": "not_started",
+        "notes": "File not yet submitted to lender review.",
+        "dueDate": null,
+        "lastUpdatedAt": "2026-04-07T09:40:00Z",
+        "blockerReason": null,
+        "percentComplete": 0
+      },
+      {
+        "sectionKey": "closing",
+        "sectionLabel": "Closing",
+        "name": "Carla Calhoun",
+        "status": "not_started",
+        "notes": "Closing prep not started.",
+        "dueDate": null,
+        "lastUpdatedAt": "2026-04-07T09:45:00Z",
+        "blockerReason": null,
+        "percentComplete": 0
+      }
+    ]
+  }
+}

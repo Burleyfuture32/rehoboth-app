@@ -1,0 +1,60 @@
+[[TASK PACKET]]
+ID: FEAT-001
+TITLE: [feature title]
+FOUNDER REQUEST:
+[describe what you want built]
+
+BUSINESS GOAL:
+[what this should help the business do]
+
+PRIMARY USERS:
+- [user type]
+- [user type]
+
+SCOPE:
+- [item]
+- [item]
+- [item]
+
+OUT OF SCOPE:
+- [item]
+- [item]
+
+MVP STATUS:
+[MVP / V1 / V2]
+
+WORKFLOWS AFFECTED:
+- [workflow]
+- [workflow]
+
+SCREENS / SURFACES AFFECTED:
+- [screen]
+- [screen]
+
+DATA / ENTITIES AFFECTED:
+- [entity]
+- [entity]
+
+PERMISSIONS IMPACT:
+[none / limited / significant]
+
+COMPLIANCE / AUDIT SENSITIVITY:
+[low / medium / high]
+
+ACCEPTANCE CRITERIA:
+- [clear requirement]
+- [clear requirement]
+- [clear requirement]
+
+NON-GOALS:
+- [what this should not become]
+- [what this should not include]
+
+RISKS:
+- [risk]
+- [risk]
+
+DEFINITION OF DONE:
+- [done signal]
+- [done signal]
+[[END TASK PACKET]]

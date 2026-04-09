@@ -1,0 +1,51 @@
+{
+  "deal": {
+    "id": "deal_001",
+    "name": "Sample Purchase File",
+    "overall_percent_complete": 60,
+    "total_sections": 5,
+    "completed_sections": 3,
+    "has_overdue_sections": true,
+    "last_status_recalc_at": "2026-04-07T11:00:00Z"
+  },
+  "status_tracker_sections": [
+    {
+      "id": "sts_001",
+      "deal_id": "deal_001",
+      "section_key": "borrower",
+      "section_label": "Borrower",
+      "person_or_company_name": "John Smith",
+      "status": "complete",
+      "status_color": "green",
+      "notes": "All requested borrower docs received and signed.",
+      "assigned_to_user_id": "user_100",
+      "due_date": "2026-04-05",
+      "last_updated_at": "2026-04-07T10:15:00Z",
+      "updated_by_user_id": "user_110",
+      "blocker_reason": null,
+      "percent_complete": 100,
+      "is_blocked": false,
+      "is_overdue": false,
+      "manual_override": false
+    },
+    {
+      "id": "sts_002",
+      "deal_id": "deal_001",
+      "section_key": "lo",
+      "section_label": "LO",
+      "person_or_company_name": "Kelvin Abram",
+      "status": "pending",
+      "status_color": "yellow",
+      "notes": "Waiting on borrower explanation letter.",
+      "assigned_to_user_id": "user_110",
+      "due_date": "2026-04-08",
+      "last_updated_at": "2026-04-07T10:30:00Z",
+      "updated_by_user_id": "user_110",
+      "blocker_reason": "Need borrower LOE before moving to next review step.",
+      "percent_complete": 70,
+      "is_blocked": true,
+      "is_overdue": false,
+      "manual_override": false
+    }
+  ]
+}

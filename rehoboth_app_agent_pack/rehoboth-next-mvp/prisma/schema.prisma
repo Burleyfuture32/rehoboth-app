@@ -1,0 +1,306 @@
+generator client {
+  provider = "prisma-client-js"
+  engineType = "binary"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Borrower {
+  id         String   @id @default(cuid())
+  name       String
+  entityType String
+  experience String?
+  email      String
+  phone      String
+  createdAt  DateTime @default(now())
+  deals      Deal[]
+}
+
+model Deal {
+  id              String    @id @default(cuid())
+  borrowerId      String
+  borrower        Borrower  @relation(fields: [borrowerId], references: [id], onDelete: Cascade)
+  name            String
+  dealType        DealType
+  stage           DealStage @default(LEAD)
+  program         String
+  propertyAddress String
+  market          String
+  occupancy       String
+  source          String
+  loanAmount      Int
+  estimatedValue  Int
+  ltv             Int
+  summary         String
+  targetCloseDate DateTime
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  tasks           Task[]
+  documentRequests DocumentRequest[]
+  loanFile        LoanFile?
+  activities      DealActivity[]
+  capitalSources  CapitalSourceMatch[]
+  communicationLogs CommunicationLog[]
+  statusTrackerSections StatusTrackerSection[]
+  knowledgeEntries DealKnowledgeEntry[]
+}
+
+model Task {
+  id        String       @id @default(cuid())
+  dealId    String
+  deal      Deal         @relation(fields: [dealId], references: [id], onDelete: Cascade)
+  title     String
+  owner     String
+  dueDate   DateTime
+  priority  TaskPriority
+  status    TaskStatus   @default(OPEN)
+  category  String
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+}
+
+model DocumentRequest {
+  id               String         @id @default(cuid())
+  dealId           String
+  deal             Deal           @relation(fields: [dealId], references: [id], onDelete: Cascade)
+  title            String
+  category         String
+  requestedBy      String
+  notes            String?
+  status           DocumentStatus @default(REQUESTED)
+  uploadedFileName String?
+  uploadedFileUrl  String?
+  uploadedAt       DateTime?
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+}
+
+model LoanFile {
+  id                    String   @id @default(cuid())
+  dealId                String   @unique
+  deal                  Deal     @relation(fields: [dealId], references: [id], onDelete: Cascade)
+  borrowerLegalName     String?
+  borrowerTaxId         String?
+  borrowerDob           String?
+  coBorrowerName        String?
+  coBorrowerCreditScore String?
+  entityLegalName       String?
+  entityState           String?
+  guarantors            String?
+  referralSource        String?
+  loanPurpose           String?
+  requestedLoanAmount   String?
+  purchasePrice         String?
+  estimatedValue        String?
+  cashToClose           String?
+  termMonths            String?
+  amortizationMonths    String?
+  ratePreference        String?
+  propertyType          String?
+  occupancyPlan         String?
+  unitCount             String?
+  yearBuilt             String?
+  titleStatus           String?
+  appraisalStatus       String?
+  insuranceStatus       String?
+  floodZoneStatus       String?
+  monthlyIncome         String?
+  monthlyDebt           String?
+  liquidAssets          String?
+  reservesOnHand        String?
+  noi                   String?
+  dscr                  String?
+  creditScore           String?
+  dti                   String?
+  backgroundSummary     String?
+  conditionsSummary     String?
+  missingItemsSummary   String?
+  processorNotes        String?
+  underwritingNotes     String?
+  submissionStatus      SubmissionStatus @default(NOT_READY)
+  recommendedAction     String?
+  submissionNotes       String?
+  closingAttorney       String?
+  closingConditions     String?
+  targetClosingDate     String?
+  fundedAmount          String?
+  firstPaymentDate      String?
+  exitStrategy          String?
+  relationshipNotes     String?
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+}
+
+model DealActivity {
+  id        String   @id @default(cuid())
+  dealId    String
+  deal      Deal     @relation(fields: [dealId], references: [id], onDelete: Cascade)
+  title     String
+  body      String
+  createdBy String
+  kind      String   @default("NOTE")
+  createdAt DateTime @default(now())
+}
+
+model CommunicationLog {
+  id           String                 @id @default(cuid())
+  dealId       String
+  deal         Deal                   @relation(fields: [dealId], references: [id], onDelete: Cascade)
+  channel      CommunicationChannel
+  direction    CommunicationDirection @default(OUTBOUND)
+  contactName  String?
+  contactValue String?
+  subject      String?
+  message      String
+  outcome      String?
+  createdBy    String
+  createdAt    DateTime               @default(now())
+  updatedAt    DateTime               @updatedAt
+}
+
+model CapitalSourceMatch {
+  id           String              @id @default(cuid())
+  dealId       String
+  deal         Deal                @relation(fields: [dealId], references: [id], onDelete: Cascade)
+  lenderName   String
+  program      String
+  status       CapitalSourceStatus @default(TARGETED)
+  quoteAmount  String?
+  leverage     String?
+  rate         String?
+  notes        String?
+  createdAt    DateTime            @default(now())
+  updatedAt    DateTime            @updatedAt
+}
+
+model LenderRatesheet {
+  id             String   @id @default(cuid())
+  lenderName     String
+  programName    String
+  dealTypes      String
+  propertyFocus  String
+  markets        String
+  minLoanAmount  String
+  maxLoanAmount  String
+  maxLeverage    String
+  minDscr        String?
+  minFico        String?
+  rateRange      String
+  termOptions    String
+  recourse       String
+  turnTime       String
+  contactName    String
+  contactEmail   String
+  notes          String?
+  updatedAtLabel String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model StatusTrackerSection {
+  id                   String                   @id @default(cuid())
+  dealId               String
+  deal                 Deal                     @relation(fields: [dealId], references: [id], onDelete: Cascade)
+  sectionKey           StatusTrackerSectionKey
+  status               StatusTrackerStatus      @default(NOT_STARTED)
+  personOrCompanyName  String?
+  assignedToName       String?
+  notes                String?
+  dueDate              DateTime?
+  blockerReason        String?
+  percentComplete      Int                      @default(0)
+  isBlocked            Boolean                  @default(false)
+  isOverdue            Boolean                  @default(false)
+  manualOverride       Boolean                  @default(false)
+  manualOverrideReason String?
+  updatedByName        String?
+  createdAt            DateTime                 @default(now())
+  updatedAt            DateTime                 @updatedAt
+
+  @@unique([dealId, sectionKey])
+}
+
+model DealKnowledgeEntry {
+  id          String   @id @default(cuid())
+  dealId      String
+  deal        Deal     @relation(fields: [dealId], references: [id], onDelete: Cascade)
+  question    String
+  answer      String
+  resourceKey String?
+  createdBy   String   @default("Knowledge Base")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+enum DealType {
+  RESIDENTIAL
+  CRE
+}
+
+enum DealStage {
+  LEAD
+  NEW_FILE
+  PROCESSING
+  UNDERWRITING
+  DOCS_REQUESTED
+  CLOSING
+}
+
+enum TaskPriority {
+  HIGH
+  MEDIUM
+  LOW
+}
+
+enum TaskStatus {
+  OPEN
+  DONE
+}
+
+enum DocumentStatus {
+  REQUESTED
+  UPLOADED
+}
+
+enum SubmissionStatus {
+  NOT_READY
+  READY_TO_SUBMIT
+  SUBMITTED
+}
+
+enum CapitalSourceStatus {
+  TARGETED
+  SUBMITTED
+  QUOTE_RECEIVED
+  PASSED
+}
+
+enum CommunicationChannel {
+  EMAIL
+  TEXT
+  CALL
+}
+
+enum CommunicationDirection {
+  INBOUND
+  OUTBOUND
+}
+
+enum StatusTrackerSectionKey {
+  BORROWER
+  LO
+  TITLE
+  LENDER
+  CLOSING
+}
+
+enum StatusTrackerStatus {
+  NOT_STARTED
+  PENDING
+  IN_PROGRESS
+  COMPLETE
+  OVERDUE
+}

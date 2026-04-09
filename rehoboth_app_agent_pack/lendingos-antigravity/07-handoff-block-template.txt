@@ -1,0 +1,29 @@
+<<<HANDOFF>>>
+FROM: Command
+TO: UX
+TASK: Design the lead intake flow
+REQUIRED INPUTS:
+- task packet
+- user type
+- MVP scope
+
+CONTEXT:
+We need a beginner-friendly intake experience for both residential and CRE leads.
+
+CONSTRAINTS:
+- low-tech users
+- minimum fields first
+- must support later enrichment
+
+DELIVERABLE REQUIRED:
+UX spec with flow, screen layout, fields, empty/error states, and low-tech protections
+
+ACCEPTANCE CHECK:
+- one clear primary action
+- plain-language labels
+- no clutter
+
+RISKS TO WATCH:
+- too many fields upfront
+- mixing CRE and residential too early
+<<<END HANDOFF>>>

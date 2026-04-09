@@ -1,0 +1,37 @@
+[[QA PACKET]]
+TASK ID: FEAT-001
+FEATURE: Lead intake
+
+REQUIREMENTS UNDER TEST:
+- user can create a residential lead
+- user can create a CRE lead
+- only minimal required fields are enforced
+
+HAPPY PATHS:
+- create residential lead successfully
+- create CRE lead successfully
+- save draft and return later
+
+EDGE CASES:
+- missing required fields
+- switching lead type mid-form
+- duplicate email or phone
+
+FAILURE CASES:
+- server error on submit
+- validation mismatch
+- lost network during save
+
+PERMISSION CHECKS:
+- only authorized users can create leads
+- unauthorized users cannot access intake screen
+
+USABILITY CHECKS:
+- form labels are plain language
+- primary CTA is obvious
+- error messages are understandable
+
+REGRESSION AREAS:
+- dashboard lead counts
+- pipeline creation hooks
+[[END QA PACKET]]
