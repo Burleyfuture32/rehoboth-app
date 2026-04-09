@@ -1,0 +1,53 @@
+{
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/api/deals/:dealId/status-tracker",
+      "purpose": "Return overall tracker summary and all section rows for a deal"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/deals/:dealId/status-tracker/:sectionId",
+      "purpose": "Update a section manually, including status, notes, due date, blocker reason"
+    },
+    {
+      "method": "POST",
+      "path": "/api/deals/:dealId/status-tracker/recalculate",
+      "purpose": "Recalculate all section statuses and overall percent based on rules/events"
+    },
+    {
+      "method": "GET",
+      "path": "/api/deals/:dealId/status-tracker/history",
+      "purpose": "Return audit log of status changes and manual overrides"
+    }
+  ],
+  "payload_examples": {
+    "patch_section": {
+      "status": "pending",
+      "notes": "Waiting on title commitment.",
+      "due_date": "2026-04-10",
+      "blocker_reason": "Title company has not returned search yet.",
+      "manual_override_reason": "Operations reviewed file and adjusted status manually."
+    },
+    "tracker_response": {
+      "deal_id": "deal_001",
+      "overall_percent_complete": 60,
+      "completed_sections": 3,
+      "total_sections": 5,
+      "has_overdue_sections": true,
+      "sections": [
+        {
+          "section_key": "borrower",
+          "section_label": "Borrower",
+          "person_or_company_name": "John Smith",
+          "status": "complete",
+          "notes": "Docs received",
+          "due_date": "2026-04-05",
+          "last_updated_at": "2026-04-07T10:15:00Z",
+          "blocker_reason": null,
+          "percent_complete": 100
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,82 @@
+[[TASK PACKET]]
+ID: MVP-001
+TITLE: MVP build order
+FOUNDER REQUEST:
+Create the MVP build order for this CRM for CRE and residential lending.
+
+BUSINESS GOAL:
+Define the fastest path to launch a clean, usable first version without overbuilding.
+
+PRIMARY USERS:
+- loan officer
+- processor
+- CRE originator
+- admin
+
+SCOPE:
+- roadmap
+- first 20 tickets
+- first 10 tables
+- first 10 endpoints
+- first 8 screens
+- first 5 automations
+- defer list
+
+OUT OF SCOPE:
+- final visual design polish
+- advanced enterprise permissions
+- custom report builder
+
+MVP STATUS:
+MVP
+
+WORKFLOWS AFFECTED:
+- lead intake
+- pipeline management
+- borrower/deal tracking
+- tasks
+- document collection
+
+SCREENS / SURFACES AFFECTED:
+- dashboard
+- lead intake
+- contact/borrower profile
+- deal/file workspace
+- pipeline board
+- task center
+
+DATA / ENTITIES AFFECTED:
+- users
+- leads
+- contacts
+- borrowers
+- properties
+- opportunities
+- loan files
+- tasks
+- documents
+
+PERMISSIONS IMPACT:
+limited
+
+COMPLIANCE / AUDIT SENSITIVITY:
+medium
+
+ACCEPTANCE CRITERIA:
+- output is practical
+- output is MVP-disciplined
+- output separates now vs later clearly
+
+NON-GOALS:
+- advanced LOS integrations
+- enterprise analytics
+- workflow builder
+
+RISKS:
+- too much scope
+- mixing CRE and residential incorrectly
+
+DEFINITION OF DONE:
+- roadmap is ordered
+- first build slices are clear
+[[END TASK PACKET]]
