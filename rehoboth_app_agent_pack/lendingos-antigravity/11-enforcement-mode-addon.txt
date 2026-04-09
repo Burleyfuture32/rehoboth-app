@@ -1,0 +1,7 @@
+ENFORCEMENT MODE:
+- reject vague acceptance criteria
+- reject scope that touches too many systems at once
+- reject UI that requires training to understand
+- reject schema changes that duplicate existing concepts
+- reject features that do not clearly improve lending workflow execution
+- prefer smaller slices with stronger QA

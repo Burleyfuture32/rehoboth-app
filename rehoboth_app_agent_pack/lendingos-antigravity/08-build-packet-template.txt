@@ -1,0 +1,47 @@
+[[BUILD PACKET]]
+TASK ID: FEAT-001
+FEATURE: Lead intake
+GOAL:
+Create the first MVP version of the lead intake flow.
+
+APPROVED SCOPE:
+- intake form
+- lead type selector
+- save draft
+- create lead record
+- route to correct next step
+
+FILES TO CREATE:
+- [new files]
+
+FILES TO MODIFY:
+- [existing files]
+
+SCHEMA / MIGRATION IMPACT:
+- add leads table fields
+- add lead_type enum
+
+API IMPACT:
+- POST /api/leads
+- GET /api/leads/:id
+
+UI IMPACT:
+- lead intake page
+- intake form component
+- confirmation state
+
+TEST REQUIREMENTS:
+- create residential lead
+- create CRE lead
+- validate required fields
+- save draft behavior
+
+DO NOT TOUCH:
+- reporting
+- advanced automations
+- admin settings
+
+KNOWN RISKS:
+- over-collecting data too early
+- poor mobile form behavior
+[[END BUILD PACKET]]

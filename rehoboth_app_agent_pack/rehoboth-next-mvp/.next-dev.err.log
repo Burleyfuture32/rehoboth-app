@@ -1,0 +1,762 @@
+⚠ Port 3000 is in use by process 15068, using available port 3001 instead.
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={{...}} forbidden={undefined} unauthorized={undefined}>
+          <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} unauthorized={undefined} ...>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                  <SegmentViewNode type="page" pagePath="page.tsx">
+                    <SegmentTrieNode>
+                    <DashboardPage>
+                      <AppFrame>
+                        <div className="min-h-scre...">
+                          <div className="mx-auto gr...">
+                            <aside>
+                            <main className="ml-0 min-w...">
+                              <div>
+                              <header>
+                              <div>
+                              <div>
+                              <div>
+                              <QuickToolsWidget>
+                                <div
+                                  className="fixed z-30"
+                                  ref={{current:null}}
++                                 style={{left:1357,top:93}}
+-                                 style={{right:"28px",bottom:"28px"}}
+                                >
+                              ...
+                  ...
+                ...
+ 
+    at <unknown> (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+    at runWithFiberInDEV (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at emitPendingHydrationWarnings (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3438:13)
+    at completeWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6885:102)
+    at runWithFiberInDEV (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:131)
+    at completeUnitOfWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9622:23)
+    at performUnitOfWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+[browser] Encountered a script tag while rendering React component. Scripts inside React components are never executed when rendering on the client. Consider using template tag instead (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template). 
+    at completeWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6945:102)
+    at runWithFiberInDEV (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at completeUnitOfWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9622:23)
+    at performUnitOfWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6945:102)
+⨯ ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m { themeInitScript } [36mfrom[0m [32m"@/lib/theme"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m7 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m { themeInitScript } [36mfrom[0m [32m"@/lib/theme"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m7 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m { themeInitScript } [36mfrom[0m [32m"@/lib/theme"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m7 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m { themeInitScript } [36mfrom[0m [32m"@/lib/theme"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m7 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m { themeInitScript } [36mfrom[0m [32m"@/lib/theme"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m7 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m { themeInitScript } [36mfrom[0m [32m"@/lib/theme"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m7 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m { themeInitScript } [36mfrom[0m [32m"@/lib/theme"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m7 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m { themeInitScript } [36mfrom[0m [32m"@/lib/theme"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m7 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m { themeInitScript } [36mfrom[0m [32m"@/lib/theme"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m7 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m { themeInitScript } [36mfrom[0m [32m"@/lib/theme"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m7 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m { themeInitScript } [36mfrom[0m [32m"@/lib/theme"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m7 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  2 | import { Geist, Geist_Mono } from "next/font/google";
+  3 | import { themeInitScript } from "@/lib/theme";
+> 4 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | const geistSans = Geist({
+  7 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found 
+    at handleErrors (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+[browser] ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  2 | import { Geist, Geist_Mono } from "next/font/google";
+  3 | import { themeInitScript } from "@/lib/theme";
+> 4 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | const geistSans = Geist({
+  7 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found 
+    at handleErrors (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+[browser] ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  2 | import { Geist, Geist_Mono } from "next/font/google";
+  3 | import { themeInitScript } from "@/lib/theme";
+> 4 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | const geistSans = Geist({
+  7 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found 
+    at handleErrors (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+[browser] ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  2 | import { Geist, Geist_Mono } from "next/font/google";
+  3 | import { themeInitScript } from "@/lib/theme";
+> 4 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | const geistSans = Geist({
+  7 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found 
+    at handleErrors (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+⨯ ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m { themeInitScript } [36mfrom[0m [32m"@/lib/theme"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m7 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  2 | import { Geist, Geist_Mono } from "next/font/google";
+  3 | import { themeInitScript } from "@/lib/theme";
+> 4 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | const geistSans = Geist({
+  7 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found 
+    at handleErrors (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+⨯ ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m { themeInitScript } [36mfrom[0m [32m"@/lib/theme"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m7 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m { themeInitScript } [36mfrom[0m [32m"@/lib/theme"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m7 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m { themeInitScript } [36mfrom[0m [32m"@/lib/theme"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m7 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] Uncaught Error: ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  2 | import { Geist, Geist_Mono } from "next/font/google";
+  3 | import { themeInitScript } from "@/lib/theme";
+> 4 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | const geistSans = Geist({
+  7 |   variable: "--font-geist-sans",
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/app/layout.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./src/app/layout.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+[browser] ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  2 | import { Geist, Geist_Mono } from "next/font/google";
+  3 | import { themeInitScript } from "@/lib/theme";
+> 4 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | const geistSans = Geist({
+  7 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found 
+    at handleErrors (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  2 | import { Geist, Geist_Mono } from "next/font/google";
+  3 | import { themeInitScript } from "@/lib/theme";
+> 4 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | const geistSans = Geist({
+  7 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found 
+    at handleErrors (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  2 | import { Geist, Geist_Mono } from "next/font/google";
+  3 | import { themeInitScript } from "@/lib/theme";
+> 4 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | const geistSans = Geist({
+  7 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found 
+    at handleErrors (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  2 | import { Geist, Geist_Mono } from "next/font/google";
+  3 | import { themeInitScript } from "@/lib/theme";
+> 4 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | const geistSans = Geist({
+  7 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found 
+    at handleErrors (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  2 | import { Geist, Geist_Mono } from "next/font/google";
+  3 | import { themeInitScript } from "@/lib/theme";
+> 4 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | const geistSans = Geist({
+  7 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found 
+    at handleErrors (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  2 | import { Geist, Geist_Mono } from "next/font/google";
+  3 | import { themeInitScript } from "@/lib/theme";
+> 4 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | const geistSans = Geist({
+  7 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found 
+    at handleErrors (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./src/app/layout.tsx:4:1
+Module not found: Can't resolve './globals.css'
+  2 | import { Geist, Geist_Mono } from "next/font/google";
+  3 | import { themeInitScript } from "@/lib/theme";
+> 4 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | const geistSans = Geist({
+  7 |   variable: "--font-geist-sans",
+
+https://nextjs.org/docs/messages/module-not-found 
+    at handleErrors (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={{...}} forbidden={undefined} unauthorized={undefined}>
+          <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} unauthorized={undefined} ...>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                  <SegmentViewNode type="page" pagePath="page.tsx">
+                    <SegmentTrieNode>
+                    <DashboardPage>
+                      <AppFrame>
+                        <div className="min-h-scre...">
+                          <div className="mx-auto gr...">
+                            <aside>
+                            <main className="ml-0 min-w...">
+                              <div>
+                              <section>
+                              <div>
+                              <div>
+                              <div>
+                              <QuickToolsWidget>
+                                <div
+                                  className="fixed z-30"
+                                  ref={{current:null}}
++                                 style={{left:1627,top:539}}
+-                                 style={{right:"28px",bottom:"28px"}}
+                                >
+                              ...
+                  ...
+                ...
+ 
+    at <unknown> (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+    at runWithFiberInDEV (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at emitPendingHydrationWarnings (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3438:13)
+    at completeWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6885:102)
+    at runWithFiberInDEV (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:131)
+    at completeUnitOfWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9622:23)
+    at performUnitOfWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerScrollAndFocusHandlerOld focusAndScrollRef={{scrollRef:null, ...}} cacheNode={{rsc:{...}, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="pipeline/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/pipeline" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} ...>
+                  <SegmentViewNode type="page" pagePath="pipeline/p...">
+                    <SegmentTrieNode>
+                    <PipelinePage>
+                      <AppFrame>
+                        <div className="min-h-scre...">
+                          <div className="mx-auto gr...">
+                            <aside>
+                            <main className="ml-0 min-w...">
+                              <div>
+                              <section>
+                              <div>
+                              <QuickToolsWidget>
+                                <div
+                                  className="fixed z-30"
+                                  ref={{current:null}}
++                                 style={{left:1627,top:539}}
+-                                 style={{right:"28px",bottom:"28px"}}
+                                >
+                              ...
+                  ...
+                ...
+      ...
+ 
+    at <unknown> (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+    at runWithFiberInDEV (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at emitPendingHydrationWarnings (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3438:13)
+    at completeWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6885:102)
+    at runWithFiberInDEV (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:131)
+    at completeUnitOfWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9622:23)
+    at performUnitOfWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerScrollAndFocusHandlerOld focusAndScrollRef={{scrollRef:null, ...}} cacheNode={{rsc:{...}, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="tasks/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/tasks" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                  <SegmentViewNode type="page" pagePath="tasks/page...">
+                    <SegmentTrieNode>
+                    <TaskCenterPage>
+                      <AppFrame>
+                        <div className="min-h-scre...">
+                          <div className="mx-auto gr...">
+                            <aside>
+                            <main className="ml-0 min-w...">
+                              <div>
+                              <section>
+                              <section>
+                              <QuickToolsWidget>
+                                <div
+                                  className="fixed z-30"
+                                  ref={{current:null}}
++                                 style={{left:1037.7332763671875,top:33.666648864746094}}
+-                                 style={{right:"28px",bottom:"28px"}}
+                                >
+                              ...
+                  ...
+                ...
+      ...
+ 
+    at <unknown> (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+    at runWithFiberInDEV (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at emitPendingHydrationWarnings (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3438:13)
+    at completeWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6885:102)
+    at runWithFiberInDEV (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:131)
+    at completeUnitOfWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9622:23)
+    at performUnitOfWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerScrollAndFocusHandlerOld focusAndScrollRef={{scrollRef:null, ...}} cacheNode={{rsc:{...}, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="pipeline/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/pipeline" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} ...>
+                  <SegmentViewNode type="page" pagePath="pipeline/p...">
+                    <SegmentTrieNode>
+                    <PipelinePage>
+                      <AppFrame>
+                        <div className="min-h-scre...">
+                          <div className="mx-auto gr...">
+                            <aside>
+                            <main className="ml-0 min-w...">
+                              <div>
+                              <section>
+                              <div>
+                              <QuickToolsWidget>
+                                <div
+                                  className="fixed z-30"
+                                  ref={{current:null}}
++                                 style={{left:1037.7332763671875,top:33.666648864746094}}
+-                                 style={{right:"28px",bottom:"28px"}}
+                                >
+                              ...
+                  ...
+                ...
+      ...
+ 
+    at <unknown> (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+    at runWithFiberInDEV (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at emitPendingHydrationWarnings (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3438:13)
+    at completeWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6885:102)
+    at runWithFiberInDEV (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:131)
+    at completeUnitOfWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9622:23)
+    at performUnitOfWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerScrollAndFocusHandlerOld focusAndScrollRef={{scrollRef:null, ...}} cacheNode={{rsc:{...}, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="intake/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <InnerLayoutRouter url="/leads/int..." tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} ...>
+                  <SegmentViewNode type="page" pagePath="leads/inta...">
+                    <SegmentTrieNode>
+                    <LeadIntakePage>
+                      <AppFrame>
+                        <div className="min-h-scre...">
+                          <div className="mx-auto gr...">
+                            <aside>
+                            <main className="ml-0 min-w...">
+                              <div>
+                              <section>
+                              <section>
+                              <QuickToolsWidget>
+                                <div
+                                  className="fixed z-30"
+                                  ref={{current:null}}
++                                 style={{left:1037.7332763671875,top:33.666648864746094}}
+-                                 style={{right:"28px",bottom:"28px"}}
+                                >
+                              ...
+                  ...
+                ...
+      ...
+ 
+    at <unknown> (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+    at runWithFiberInDEV (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at emitPendingHydrationWarnings (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3438:13)
+    at completeWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6885:102)
+    at runWithFiberInDEV (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:131)
+    at completeUnitOfWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9622:23)
+    at performUnitOfWork (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://C:/Users/kelvi/Documents/AI PROjects/mkdir rehoboth-app/rehoboth_app_agent_pack/rehoboth-next-mvp/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)

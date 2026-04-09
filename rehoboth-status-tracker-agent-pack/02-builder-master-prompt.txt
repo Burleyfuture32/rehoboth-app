@@ -1,0 +1,74 @@
+Build a production-ready **Status Tracker** feature for the Rehoboth lending app.
+
+## Context
+This app is used for lending operations. Each deal needs a clean visual tracker showing the status of the main parties involved in moving a loan file forward.
+
+## Objective
+Create a deal-level tab called `Status Tracker`.
+
+## Required sections
+Always render these sections in this exact order:
+1. Borrower
+2. LO
+3. Title
+4. Lender
+5. Closing
+
+## Required fields per section
+Each row/card must show:
+- section name
+- assigned person or company name
+- current status badge
+- short note
+- due date
+- last updated timestamp
+- blocker reason when applicable
+- percent complete for that section if available
+
+## Required statuses
+Use these canonical values:
+- `not_started`
+- `pending`
+- `in_progress`
+- `complete`
+- `overdue`
+
+## Required status presentation
+- green = complete
+- yellow = pending
+- blue = in progress
+- gray = not started
+- red = overdue
+
+## Behavior rules
+- Show an overall deal progress bar at the top.
+- Overall progress should update automatically when section statuses change.
+- If a section due date passes and status is not `complete`, automatically set it to `overdue`.
+- Allow manual notes and blocker reasons.
+- Support automatic updates from events like task completion, document upload, milestone completion, condition clearing, and deadline passing.
+- Make it mobile-friendly and beginner-friendly.
+- Keep the interface clean and obvious for non-technical users.
+
+## UX requirements
+- Leadership must be able to understand file health in under 5 seconds.
+- Avoid clutter.
+- Make overdue and blocked items obvious.
+- Show last updated times clearly.
+- Make notes expandable if long.
+
+## Output required from you
+Generate:
+1. frontend UI component structure
+2. backend data model
+3. API endpoints or server actions
+4. status calculation logic
+5. seed/sample data
+6. acceptance criteria
+7. any migration/schema notes needed
+
+## Constraints
+- Keep the first version simple.
+- Do not overengineer the workflow engine in MVP.
+- Use clear naming.
+- Do not bury status in submenus.
+- Optimize for web first, but keep layout mobile-safe.
